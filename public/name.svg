@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A1816" />
+      <stop offset="85%" stop-color="#2C2825" />
+      <stop offset="100%" stop-color="#C4604A" />
+    </linearGradient>
+  </defs>
+  <text x="600" y="210" font-family="'Playfair Display', Georgia, serif" font-size="110" font-weight="900" letter-spacing="-2" fill="url(#textGrad)" text-anchor="middle">
+    Shivam Kedare<tspan fill="#C4604A">.</tspan>
+  </text>
+  <text x="600" y="280" font-family="'Inter', sans-serif" font-size="24" font-weight="600" letter-spacing="10" fill="#7A746D" text-anchor="middle">
+    WEB DEVELOPER &amp; SOFTWARE SYSTEMS ENGINEER
+  </text>
+</svg>

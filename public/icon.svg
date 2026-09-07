@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1816" />
+      <stop offset="100%" stop-color="#2C2825" />
+    </linearGradient>
+    <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DE735D" />
+      <stop offset="100%" stop-color="#C4604A" />
+    </linearGradient>
+  </defs>
+  <!-- Background Disc -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)" />
+  <!-- Inner Ornamental Border -->
+  <rect x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="#C4604A" stroke-width="4" stroke-opacity="0.4" stroke-dasharray="8 6" />
+  <rect x="36" y="36" width="440" height="440" rx="70" fill="none" stroke="#FAF6F1" stroke-width="1.5" stroke-opacity="0.2" />
+  <!-- Center Monogram "SK" -->
+  <g transform="translate(256, 260)" text-anchor="middle" dominant-baseline="central">
+    <text font-family="'Playfair Display', Georgia, serif" font-size="210" font-weight="900" letter-spacing="-8" fill="url(#terracottaGrad)">
+      S<tspan fill="#FAF6F1" font-weight="400" dx="4">K</tspan>
+    </text>
+  </g>
+  <!-- Bottom Editorial Seal Text -->
+  <text x="256" y="420" font-family="'Inter', sans-serif" font-size="20" font-weight="700" letter-spacing="8" fill="#FAF6F1" fill-opacity="0.7" text-anchor="middle">
+    SHIVAM KEDARE
+  </text>
+  <!-- Decorative Accent Dot -->
+  <circle cx="256" cy="100" r="6" fill="#C4604A" />
+</svg>
