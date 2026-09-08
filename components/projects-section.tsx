@@ -22,7 +22,7 @@ const projects = [
     feature: "Cross-device responsive UI & Smartsheet workflows",
     url: "https://github.com/shiv369tes",
     category: "Web",
-    image: "/gitfool-optimized.webp",
+    image: "/EventsAir.jpg",
   },
   {
     name: "String Mapping Fuzzy Logic",
@@ -38,7 +38,7 @@ const projects = [
     feature: "Low-overhead buffer logic with 95% accuracy",
     url: "https://github.com/shiv369tes",
     category: "Tools",
-    image: "/monsterfps-optimized.webp",
+    image: "/Sensor data image.png",
   },
   {
     name: "Save Paws",
@@ -46,7 +46,7 @@ const projects = [
     feature: "Rescue showcase, adoption matching & public education",
     url: "https://github.com/shiv369tes/SavePaws",
     category: "Web",
-    image: "/fin-read-optimized.webp",
+    image: "/Save paws.jpg", 
   },
 ]
 
