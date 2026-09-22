@@ -200,7 +200,7 @@ export const PROJECTS: Project[] = [
     feature: 'End-to-end registration logic, cross-device usability, and live Smartsheet-based data synchronization during active global summits.',
     url: 'https://github.com/shiv369tes',
     github: 'https://github.com/shiv369tes',
-    image: '/gitfool-optimized.webp',
+    image: '/EventsAir.jpg',
     stats: [
       { label: 'Portals', value: '25+ Events' },
       { label: 'Fidelity', value: '100% Cross-Device' },
@@ -275,7 +275,7 @@ export const PROJECTS: Project[] = [
     feature: 'Low-overhead real-time stream processing delivering a 95% accurate emergency detection rate under noisy telemetry.',
     url: 'https://github.com/shiv369tes',
     github: 'https://github.com/shiv369tes',
-    image: '/monsterfps-optimized.webp',
+    image: '/Sensor data image.png',
     stats: [
       { label: 'Accuracy', value: '95% Detection' },
       { label: 'Processing', value: 'Real-time' },
@@ -312,7 +312,7 @@ export const PROJECTS: Project[] = [
     feature: 'Interactive pet catalog, digital adoption questionnaires, and responsive community educational modules on responsible pet ownership.',
     url: 'https://github.com/shiv369tes/SavePaws',
     github: 'https://github.com/shiv369tes/SavePaws',
-    image: '/fin-read-optimized.webp',
+    image: '/Save paws.jpg',
     stats: [
       { label: 'Mission', value: 'Animal Welfare' },
       { label: 'UI', value: '100% Mobile Ready' },

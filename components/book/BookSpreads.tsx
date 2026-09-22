@@ -108,7 +108,7 @@ export function BookSpread({
 ───────────────────────────────────────────────────────────── */
 function FrontispieceLeft() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 border-r border-[#EDE4D9] flex flex-col justify-between relative bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 border-r border-[#EDE4D9] flex flex-col justify-between relative bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
       <div className="absolute top-3 left-3 right-3 bottom-3 border border-[#E2D5C6] pointer-events-none rounded-sm" />
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
@@ -124,28 +124,28 @@ function FrontispieceLeft() {
             Shivam Kedare
           </h1>
           <p className="font-script text-lg sm:text-2xl text-[#C4604A] pt-0.5 sm:pt-1">
-            web developer &amp; software systems engineer
+            systems architect & backend engineer
           </p>
         </div>
 
         <p className="text-[11px] sm:text-xs text-[#5E5854] mt-3 sm:mt-5 leading-relaxed max-w-sm">
-          A specialized treatise on responsive web development, enterprise event technology, local AI
-          automation systems, and high-performance algorithms.
+          A specialized treatise on high-throughput Node.js runtimes, distributed concurrency,
+          fault-tolerant data schemas, and edge-native architectures.
         </p>
       </div>
 
       <div className="my-auto py-1 sm:py-2 flex items-center gap-3 sm:gap-4">
         <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-dashed border-[#C4604A]/60 flex items-center justify-center p-1 shrink-0">
           <span className="text-[8px] sm:text-[9px] font-mono uppercase tracking-wider text-[#C4604A] font-bold text-center leading-none">
-            VERIFIED<br />DEVELOPER
+            VERIFIED<br />SYSTEM
           </span>
         </div>
         <div>
           <p className="text-[9px] sm:text-[10px] uppercase tracking-wider font-semibold text-[#1A1816]">
-            User-Focused Engineering
+            Deterministic Proof of Work
           </p>
           <p className="text-[10px] sm:text-[11px] text-[#7A746D]">
-            Mumbai · Global Digital Experiences
+            Mumbai · Global Distributed Deployments
           </p>
         </div>
       </div>
@@ -160,7 +160,7 @@ function FrontispieceLeft() {
 
 function FrontispieceRight() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 flex flex-col justify-between relative bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 flex flex-col justify-between relative bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
       <div className="absolute top-3 left-3 right-3 bottom-3 border border-[#E2D5C6] pointer-events-none rounded-sm" />
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
@@ -205,36 +205,36 @@ function FrontispieceRight() {
 ───────────────────────────────────────────────────────────── */
 function ManifestoLeft() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
-          <span>Doctrine &amp; Craft</span>
+          <span>Doctrine & Craft</span>
           <span>Plate II · Left</span>
         </div>
 
         <div className="mt-3 sm:mt-5">
           <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] text-[#566449] font-bold">
-            Principle I · Responsive Craft
+            Principle I · Concurrency
           </span>
           <h2 className="font-serif text-lg sm:text-2xl font-bold text-[#1A1816] mt-0.5 sm:mt-1 mb-1.5 sm:mb-2">
-            Fidelity Across Every Viewport
+            Asynchronous Flow over Brute Force
           </h2>
           <p className="text-[11px] sm:text-xs text-[#5E5854] leading-relaxed">
-            True usability begins with clean semantic HTML, fluid CSS styling, and intuitive interactions
-            that feel effortless across any screen — from smartphones to multi-monitor workstations.
+            True scalability is not solved by stacking expensive server cores, but by honoring the
+            non-blocking event loop, stream pipelines, and zero-allocation memory buffers.
           </p>
         </div>
 
         <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#EDE4D9]/80">
           <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] text-[#C4604A] font-bold">
-            Principle II · Safe Automation
+            Principle II · Isolation
           </span>
           <h3 className="font-serif text-sm sm:text-lg font-bold text-[#1A1816] mt-0.5 mb-1">
-            Sandboxed AI &amp; Zero Destructive Actions
+            Fault Boundaries & Zero Cascading
           </h3>
           <p className="text-[11px] sm:text-xs text-[#5E5854] leading-relaxed">
-            When transforming natural language into local operating system executions, deterministic safety
-            boundaries and strict AST verification must always precede command dispatch.
+            Every critical subsystem must degrade gracefully. If a database shard locks, the edge cache
+            serves stale-while-revalidate rather than surfacing a catastrophic 500 error.
           </p>
         </div>
       </div>
@@ -249,7 +249,7 @@ function ManifestoLeft() {
 
 function ManifestoRight() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
           <span>Pillars of Execution</span>
@@ -258,20 +258,19 @@ function ManifestoRight() {
 
         <div className="mt-3 sm:mt-5">
           <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] text-[#7A3B3B] font-bold">
-            Principle III · Algorithmic Precision
+            Principle III · Determinism
           </span>
           <h2 className="font-serif text-lg sm:text-2xl font-bold text-[#1A1816] mt-0.5 sm:mt-1 mb-1.5 sm:mb-2">
-            Data Accuracy &amp; Real-Time Telemetry
+            Idempotent APIs & Atomic State
           </h2>
           <p className="text-[11px] sm:text-xs text-[#5E5854] leading-relaxed">
-            Whether reconciling noisy institutional databases with fuzzy logic or processing emergency
-            sensor streams with C++, software must execute with predictable latency and mathematical accuracy.
+            A mutation should produce the identical state whether triggered once or repeated fifty times across an unreliable wireless connection.
           </p>
         </div>
 
         <div className="mt-4 p-3 rounded bg-[#F3ECE4]/60 border-l-2 border-[#C4604A]">
           <p className="font-script text-sm sm:text-base text-[#C4604A] leading-tight">
-            &ldquo;Code should read like clear prose and execute with uncompromising reliability.&rdquo;
+            &ldquo;Code should read like clear prose and execute like a Swiss chronometer.&rdquo;
           </p>
           <span className="text-[8.5px] sm:text-[9px] uppercase tracking-wider text-[#7A746D] font-mono block mt-1">
             — Shivam Kedare, Engineering Notes
@@ -280,7 +279,7 @@ function ManifestoRight() {
       </div>
 
       <div className="pt-2 border-t border-[#EDE4D9] flex items-center justify-between text-[9px] sm:text-[10px] text-[#928B87]">
-        <span>Sign-off &amp; Seal</span>
+        <span>Sign-off & Seal</span>
         <span className="font-mono text-[#C4604A]">Page 04</span>
       </div>
     </div>
@@ -292,7 +291,7 @@ function ManifestoRight() {
 ───────────────────────────────────────────────────────────── */
 function ProjectBlueprintLeft({ project, plateNumber }: { project: (typeof PROJECTS)[0]; plateNumber: string }) {
   return (
-    <div className="h-full w-full p-6 sm:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
           <span className="text-[#C4604A] font-bold">{plateNumber}</span>
@@ -346,10 +345,10 @@ function ProjectBlueprintRight({
   onInspect?: () => void;
 }) {
   return (
-    <div className="h-full w-full p-6 sm:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
-          <span>Specimen &amp; Implementation</span>
+          <span>Specimen & Implementation</span>
           <span>Dossier</span>
         </div>
 
@@ -401,7 +400,7 @@ function ProjectBlueprintRight({
 ───────────────────────────────────────────────────────────── */
 function TaxonomyLeft() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
           <span className="text-[#C4604A] font-bold">Plate VIII</span>
@@ -410,27 +409,27 @@ function TaxonomyLeft() {
 
         <div className="mt-3 sm:mt-4">
           <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] text-[#566449] font-bold">
-            Frontend &amp; Responsive Web
+            Backend & Concurrency
           </span>
           <h2 className="font-serif text-lg sm:text-xl font-bold text-[#1A1816] mt-0.5 mb-1.5 sm:mb-2">
-            Interactive Interfaces &amp; Frameworks
+            Event Engines & Execution
           </h2>
           <div className="space-y-1 sm:space-y-1.5 text-xs text-[#5E5854]">
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FDFCFA] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">React.js &amp; Next.js</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#C4604A]">Modern Web Apps</span>
+              <span className="font-medium text-[#1A1816]">Node.js & Express.js</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#C4604A]">Primary Runtime</span>
             </div>
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FDFCFA] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">HTML5 &amp; CSS3 Styling</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#566449]">Responsive UI/UX</span>
+              <span className="font-medium text-[#1A1816]">Python / FastAPI</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#566449]">Async Systems</span>
             </div>
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FDFCFA] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">JavaScript (ES6+) &amp; TS</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#7A3B3B]">Strict Async Logic</span>
+              <span className="font-medium text-[#1A1816]">WebSockets & Streaming</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#7A3B3B]">Bidirectional</span>
             </div>
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FDFCFA] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">SEO &amp; Performance</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#928B87]">Search Discovery</span>
+              <span className="font-medium text-[#1A1816]">Go & Rust Ingestion</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#928B87]">High-Throughput</span>
             </div>
           </div>
         </div>
@@ -446,36 +445,36 @@ function TaxonomyLeft() {
 
 function TaxonomyRight() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
-          <span>Systems, AI &amp; Platforms</span>
+          <span>Storage & Cloud</span>
           <span>Taxonomy · Layer II</span>
         </div>
 
         <div className="mt-3 sm:mt-4">
           <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] text-[#C4604A] font-bold">
-            Agents, Low-Level Runtimes &amp; Cloud
+            Databases & Cloud Fabric
           </span>
           <h2 className="font-serif text-lg sm:text-xl font-bold text-[#1A1816] mt-0.5 mb-1.5 sm:mb-2">
-            Execution Engines &amp; Workflows
+            Persistent & Volatile Stores
           </h2>
           <div className="space-y-1 sm:space-y-1.5 text-xs text-[#5E5854]">
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FAF6F1] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">Python &amp; Ollama AI</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#C4604A]">Autonomous Agents</span>
+              <span className="font-medium text-[#1A1816]">PostgreSQL & Supabase</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#C4604A]">ACID & RLS</span>
             </div>
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FAF6F1] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">C &amp; C++ Systems</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#566449]">Sensor Algorithms</span>
+              <span className="font-medium text-[#1A1816]">Redis In-Memory</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#566449]">Queues & Cache</span>
             </div>
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FAF6F1] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">EventsAir &amp; Cvent</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#7A3B3B]">Event Portals</span>
+              <span className="font-medium text-[#1A1816]">Docker & Linux Daemons</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#7A3B3B]">Containers</span>
             </div>
             <div className="flex items-center justify-between p-1.5 rounded bg-[#FAF6F1] border border-[#EDE4D9]">
-              <span className="font-medium text-[#1A1816]">Smartsheet Workflows</span>
-              <span className="font-mono text-[9px] sm:text-[10px] text-[#928B87]">Automated Data</span>
+              <span className="font-medium text-[#1A1816]">AWS & Cloudflare Edge</span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#928B87]">Global Edge</span>
             </div>
           </div>
         </div>
@@ -494,7 +493,7 @@ function TaxonomyRight() {
 ───────────────────────────────────────────────────────────── */
 function ChronologyLeft() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
           <span className="text-[#C4604A] font-bold">Plate IX</span>
@@ -502,29 +501,28 @@ function ChronologyLeft() {
         </div>
 
         <div className="mt-3 sm:mt-4">
-          <span className="px-2 py-0.5 rounded text-[8.5px] sm:text-[9px] font-mono font-semibold bg-[#566449]/10 text-[#566449] uppercase tracking-wider">
-            Corporate Enterprise
+          <span className="px-2 py-0.5 rounded text-[8.5px] sm:text-[9px] font-mono font-semibold bg-[#7A3B3B]/10 text-[#7A3B3B] uppercase tracking-wider">
+            Proprietary NDA
           </span>
           <h2 className="font-serif text-lg sm:text-2xl font-bold text-[#1A1816] mt-1">
-            ATPI | Direct Travel
+            CIARL
           </h2>
           <p className="text-[11px] sm:text-xs font-semibold text-[#C4604A] mb-1.5 sm:mb-2">
-            Executive Digital Services (Events Development) · Apr 2025 — Present
+            Software Developer (Backend) · 2024 — Present
           </p>
           <p className="text-[11px] sm:text-xs text-[#5E5854] leading-relaxed">
-            Engineered responsive event websites, registration pages, dynamic mobile applications, and automated
-            Smartsheet data workflows across international event summits.
+            Designed secure Node.js backend systems, hardware sensor integration modules, and role-based access control schemas.
           </p>
         </div>
 
         <ul className="mt-2.5 sm:mt-3 space-y-1 text-[10px] sm:text-[11px] text-[#4A4541]">
           <li className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C4604A]" />
-            <span>EventsAir and Cvent portal configuration</span>
+            <span>Hardware serial API integration</span>
           </li>
           <li className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C4604A]" />
-            <span>Smartsheet workflow data synchronization</span>
+            <span>Sub-second live operations telemetry</span>
           </li>
         </ul>
       </div>
@@ -539,34 +537,34 @@ function ChronologyLeft() {
 
 function ChronologyRight() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
-          <span>Dispatch Nº 02 &amp; 03</span>
+          <span>Dispatch Nº 02 & 03</span>
           <span>Chronology</span>
         </div>
 
         <div className="mt-3 sm:mt-4">
-          <span className="px-2 py-0.5 rounded text-[8.5px] sm:text-[9px] font-mono font-semibold bg-[#7A3B3B]/10 text-[#7A3B3B] uppercase tracking-wider">
-            Frontend Development
+          <span className="px-2 py-0.5 rounded text-[8.5px] sm:text-[9px] font-mono font-semibold bg-[#566449]/10 text-[#566449] uppercase tracking-wider">
+            Production Internship
           </span>
           <h2 className="font-serif text-base sm:text-xl font-bold text-[#1A1816] mt-1">
-            Sankalp Developers Pvt. Ltd
+            Sumeru Technology Solutions
           </h2>
           <p className="text-[11px] sm:text-xs font-semibold text-[#566449] mb-1.5">
-            Junior Developer · Feb 2019 — Mar 2020
+            SDE Intern · 2024
           </p>
           <p className="text-[11px] sm:text-xs text-[#5E5854] leading-relaxed">
-            Built responsive portfolio and lead generation websites from scratch with cross-device compatibility and SEO best practices.
+            Eliminated cron bottlenecks by migrating scheduled tasks to asynchronous BullMQ Redis queues.
           </p>
         </div>
 
         <div className="mt-2.5 pt-2.5 border-t border-[#EDE4D9]/80">
           <span className="text-[9.5px] sm:text-[10px] uppercase tracking-wider font-semibold text-[#1A1816]">
-            Community Leadership &amp; Save Paws
+            Academic Faculty Service (Volunteer)
           </span>
           <p className="text-[10px] sm:text-[11px] text-[#7A746D] mt-0.5">
-            Head Member (2016–2017) for environmental initiatives &amp; volunteer for animal rescue initiatives through Save Paws.
+            Bhimrao Pradhan College · Taught DBMS & System Design to B.Sc. IT Undergraduates.
           </p>
         </div>
       </div>
@@ -584,7 +582,7 @@ function ChronologyRight() {
 ───────────────────────────────────────────────────────────── */
 function ColophonLeft() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 border-r border-[#EDE4D9] flex flex-col justify-between bg-[#FAF6F1] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
           <span className="text-[#C4604A] font-bold">Plate X</span>
@@ -596,35 +594,23 @@ function ColophonLeft() {
             <div className="flex items-center gap-1.5 mb-1">
               <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C4604A]" />
               <span className="font-serif font-bold text-xs sm:text-sm text-[#1A1816]">
-                Master of Science (IT)
+                First Rank — B.Sc. IT
               </span>
             </div>
             <p className="text-[10.5px] sm:text-[11px] text-[#5E5854]">
-              Jeevandeep Shaikshanik Sanstha Poi’s (2022–2024) · Deep Learning in NLP &amp; Image Recognition.
+              Sonubhau Baswant College, Mumbai University · Secured 1st Rank across graduating cohort.
             </p>
           </div>
 
           <div className="p-2.5 sm:p-3 rounded bg-[#FDFCFA] border border-[#EDE4D9]">
             <div className="flex items-center justify-between mb-0.5">
               <span className="font-serif font-bold text-xs sm:text-sm text-[#1A1816]">
-                Bachelor of Science (IT)
+                Data Science Certification
               </span>
-              <span className="text-[8.5px] sm:text-[9px] font-mono text-[#566449] font-bold">2019–2022</span>
+              <span className="text-[8.5px] sm:text-[9px] font-mono text-[#566449] font-bold">VERIFIED</span>
             </div>
             <p className="text-[10.5px] sm:text-[11px] text-[#5E5854]">
-              Jeevandeep Shaikshanik Sanstha · Fuzzy Matching Algorithm reducing entry errors by 40%.
-            </p>
-          </div>
-
-          <div className="p-2.5 sm:p-3 rounded bg-[#FDFCFA] border border-[#EDE4D9]">
-            <div className="flex items-center justify-between mb-0.5">
-              <span className="font-serif font-bold text-xs sm:text-sm text-[#1A1816]">
-                Ethical Hacking Workshop
-              </span>
-              <span className="text-[8.5px] sm:text-[9px] font-mono text-[#7A3B3B] font-bold">VERIFIED</span>
-            </div>
-            <p className="text-[10.5px] sm:text-[11px] text-[#5E5854]">
-              Piston InfoSolution (Sept 2018) · Bug hunting and vulnerability testing across web applications.
+              Internshala Trainings · Certificate Nº 263gl7b3rur
             </p>
           </div>
         </div>
@@ -640,7 +626,7 @@ function ColophonLeft() {
 
 function ColophonRight() {
   return (
-    <div className="h-full w-full p-6 sm:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
+    <div className="h-full w-full p-4 sm:p-6 md:p-8 lg:p-9 flex flex-col justify-between bg-[#FDFCFA] text-[#2C2825] overflow-hidden select-none">
       <div>
         <div className="flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-[0.22em] text-[#928B87] pb-2 sm:pb-3 border-b border-[#EDE4D9]">
           <span>Grand Colophon</span>
@@ -652,11 +638,11 @@ function ColophonRight() {
             Shivam Kedare
           </h2>
           <p className="text-[10px] sm:text-xs text-[#7A746D] font-mono mt-0.5">
-            shivamkedare7171@gmail.com · +91 9623777548
+            omthakur2366@gmail.com · Mumbai, India
           </p>
 
           <p className="text-[10.5px] sm:text-xs text-[#5E5854] mt-2 sm:mt-3 leading-relaxed">
-            Available for web development appointments, enterprise digital event engineering, and AI automation contracts.
+            Open for senior backend engineering roles, scalable systems architecture consulting, and high-performance developer tooling contracts.
           </p>
 
           <div className="mt-3 sm:mt-4 pt-1">
@@ -664,7 +650,7 @@ function ColophonRight() {
               Shivam Kedare
             </p>
             <span className="text-[8.5px] sm:text-[9px] uppercase tracking-wider text-[#928B87] font-mono block">
-              Author &amp; Web Development Engineer
+              Author & Distributed Systems Engineer
             </span>
           </div>
         </div>

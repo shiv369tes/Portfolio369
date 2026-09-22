@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useTransform, animate } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
@@ -28,6 +28,36 @@ export function EngineeringBook({
   const [isFlipping, setIsFlipping] = useState(false);
   const [flipDir, setFlipDir] = useState<"next" | "prev">("next");
   const [targetIdx, setTargetIdx] = useState<number | null>(null);
+  const [mobileSide, setMobileSide] = useState<"left" | "right">("left");
+  const touchStartXRef = useRef<number | null>(null);
+
+  // Sync mobile side back to left when turning plate
+  useEffect(() => {
+    setMobileSide("left");
+  }, [currentIdx]);
+
+  const handleMobileTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+  };
+
+  const handleMobileTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartXRef.current;
+    touchStartXRef.current = null;
+    if (deltaX < -45) {
+      if (mobileSide === "left") {
+        setMobileSide("right");
+      } else {
+        nextPage();
+      }
+    } else if (deltaX > 45) {
+      if (mobileSide === "right") {
+        setMobileSide("left");
+      } else {
+        prevPage();
+      }
+    }
+  };
 
   // Motion values for physical 3D rotation
   const flipAngle = useMotionValue(0); // 0 to -180 for next, 0 to 180 for prev
@@ -245,11 +275,11 @@ export function EngineeringBook({
           </div>
 
           <div className="hidden md:flex items-center gap-5 text-[#5E5854]">
-            <span>Responsive Web</span>
+            <span>Distributed Systems</span>
             <span className="text-[#E2D5C6]">•</span>
-            <span>Digital Event Systems</span>
+            <span>Real-time APIs</span>
             <span className="text-[#E2D5C6]">•</span>
-            <span>Local AI Automation</span>
+            <span>Low-Latency Architectures</span>
           </div>
 
           <div className="flex items-center gap-2 font-script text-base text-[#C4604A] lowercase tracking-normal">
@@ -267,9 +297,9 @@ export function EngineeringBook({
           <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-black text-[#1A1816] tracking-tight leading-[0.98]">
             The Digital Monograph of{" "}
             <span className="italic font-serif font-normal text-[#C4604A] block sm:inline">
-              Web Experiences
+              Resilient Systems
             </span>{" "}
-            &amp; Autonomous Systems.
+            & Distributed Craft.
           </h1>
 
           <p className="font-script text-xl sm:text-2xl text-[#C4604A] mt-2">
@@ -277,10 +307,12 @@ export function EngineeringBook({
           </p>
         </div>
 
-        {/* ── 3D Physical Book Stage ── */}
-        <div className="flex flex-col items-center gap-6">
+        {/* ── 3D Physical Book Stage (Dual Mode: Desktop 3D Spread / Mobile Single-Page Leaf) ── */}
+        <div className="flex flex-col items-center gap-6 w-full">
+          
+          {/* 1. DESKTOP STAGE (≥ md: Dual-Page 3D Open Book) */}
           <div
-            className="flex items-center justify-center w-full max-w-6xl relative select-none"
+            className="hidden md:flex items-center justify-center w-full max-w-6xl relative select-none"
             onPointerMove={handleStagePointerMove}
             onPointerLeave={handleStagePointerLeave}
           >
@@ -342,15 +374,12 @@ export function EngineeringBook({
                     className="absolute top-0 bottom-0 left-1/2 w-1/2 z-20 shadow-2xl overflow-visible pointer-events-none"
                   >
                     {/* Front Face of Turning Leaf (Right half of Current Spread) */}
-                    <div
-                      className="absolute inset-0 [backface-visibility:hidden] overflow-hidden bg-[#FDFCFA]"
-                    >
+                    <div className="absolute inset-0 [backface-visibility:hidden] overflow-hidden bg-[#FDFCFA]">
                       <BookPage
                         plateIndex={currentIdx}
                         side="right"
                         onInspectProject={onInspectProject}
                       />
-                      {/* Dynamic Paper Shadow while lifting */}
                       <motion.div
                         style={{ opacity: leafShadowNext }}
                         className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent pointer-events-none"
@@ -358,15 +387,12 @@ export function EngineeringBook({
                     </div>
 
                     {/* Back Face of Turning Leaf (Left half of Target Spread) */}
-                    <div
-                      className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden bg-[#FAF6F1]"
-                    >
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden bg-[#FAF6F1]">
                       <BookPage
                         plateIndex={nextTargetPlate}
                         side="left"
                         onInspectProject={onInspectProject}
                       />
-                      {/* Dynamic Paper Sheen while landing */}
                       <motion.div
                         style={{ opacity: leafShadowNext }}
                         className="absolute inset-0 bg-gradient-to-l from-white/30 via-transparent to-black/20 pointer-events-none"
@@ -386,15 +412,12 @@ export function EngineeringBook({
                     className="absolute top-0 bottom-0 left-0 w-1/2 z-20 shadow-2xl overflow-visible pointer-events-none"
                   >
                     {/* Front Face of Turning Leaf (Left half of Current Spread) */}
-                    <div
-                      className="absolute inset-0 [backface-visibility:hidden] overflow-hidden bg-[#FAF6F1]"
-                    >
+                    <div className="absolute inset-0 [backface-visibility:hidden] overflow-hidden bg-[#FAF6F1]">
                       <BookPage
                         plateIndex={currentIdx}
                         side="left"
                         onInspectProject={onInspectProject}
                       />
-                      {/* Dynamic Paper Shadow while lifting */}
                       <motion.div
                         style={{ opacity: leafShadowPrev }}
                         className="absolute inset-0 bg-gradient-to-l from-black/40 via-black/10 to-transparent pointer-events-none"
@@ -402,15 +425,12 @@ export function EngineeringBook({
                     </div>
 
                     {/* Back Face of Turning Leaf (Right half of Target Spread) */}
-                    <div
-                      className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(-180deg)] overflow-hidden bg-[#FDFCFA]"
-                    >
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(-180deg)] overflow-hidden bg-[#FDFCFA]">
                       <BookPage
                         plateIndex={nextTargetPlate}
                         side="right"
                         onInspectProject={onInspectProject}
                       />
-                      {/* Dynamic Paper Sheen while landing */}
                       <motion.div
                         style={{ opacity: leafShadowPrev }}
                         className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-black/20 pointer-events-none"
@@ -440,8 +460,106 @@ export function EngineeringBook({
             </button>
           </div>
 
+          {/* 2. MOBILE STAGE (< md: Single-Page Leaf Presentation with Touch Swiping) */}
+          <div className="block md:hidden w-full max-w-lg mx-auto">
+            <div
+              className="w-full rounded-lg shadow-paper-lg border-2 border-[#D4C3AF] bg-[#FAF6F1] overflow-hidden"
+              onTouchStart={handleMobileTouchStart}
+              onTouchEnd={handleMobileTouchEnd}
+            >
+              {/* Top Mobile Plate Bar with Side Toggle Switch */}
+              <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#F3ECE4] border-b border-[#EDE4D9] text-xs font-mono">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#C4604A] animate-pulse" />
+                  <span className="font-bold text-[#1A1816] text-[11px]">
+                    {activePlate.plateNumber}
+                  </span>
+                </div>
+
+                {/* Page Switcher Pill */}
+                <div className="inline-flex rounded-full bg-[#EDE4D9] p-0.5 text-[10px]">
+                  <button
+                    onClick={() => setMobileSide("left")}
+                    className={`px-2.5 py-1 rounded-full font-semibold transition-all ${
+                      mobileSide === "left"
+                        ? "bg-[#1A1816] text-[#FAF6F1] shadow-xs"
+                        : "text-[#5E5854] hover:text-[#1A1816]"
+                    }`}
+                  >
+                    Page A · Left
+                  </button>
+                  <button
+                    onClick={() => setMobileSide("right")}
+                    className={`px-2.5 py-1 rounded-full font-semibold transition-all ${
+                      mobileSide === "right"
+                        ? "bg-[#1A1816] text-[#FAF6F1] shadow-xs"
+                        : "text-[#5E5854] hover:text-[#1A1816]"
+                    }`}
+                  >
+                    Page B · Right
+                  </button>
+                </div>
+              </div>
+
+              {/* Mobile Page Content Leaf with Smooth Transition */}
+              <div className="min-h-[460px] flex flex-col justify-between">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`${currentIdx}-${mobileSide}`}
+                    initial={{ opacity: 0, x: mobileSide === "right" ? 12 : -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: mobileSide === "right" ? -12 : 12 }}
+                    transition={{ duration: 0.22 }}
+                    className="flex-1 flex flex-col justify-between"
+                  >
+                    <BookPage
+                      plateIndex={currentIdx}
+                      side={mobileSide}
+                      onInspectProject={onInspectProject}
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Touch Swipe and Nav Tip */}
+              <div className="px-3 py-2 bg-[#F3ECE4]/80 border-t border-[#EDE4D9] flex items-center justify-between text-[10.5px] font-mono text-[#7A746D]">
+                <span>← Swipe to turn →</span>
+                <span className="text-[#C4604A] font-medium">
+                  {mobileSide === "left" ? "Side A" : "Side B"} of Plate {currentIdx + 1}
+                </span>
+              </div>
+            </div>
+
+            {/* Mobile Controls: Previous / Counter / Next */}
+            <div className="flex items-center justify-between gap-3 mt-4 w-full">
+              <button
+                onClick={prevPage}
+                disabled={isFlipping}
+                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-md bg-[#F3ECE4] hover:bg-[#E2D5C6] active:bg-[#D4C3AF] text-[#1A1816] border border-[#EDE4D9] text-xs font-mono font-semibold transition-colors disabled:opacity-40"
+              >
+                <ChevronLeft className="w-4 h-4 text-[#C4604A]" />
+                <span>Prev Plate</span>
+              </button>
+
+              <div className="px-3 py-2 rounded-md bg-[#FAF6F1] border border-[#EDE4D9] text-center shrink-0">
+                <span className="font-mono text-xs font-bold text-[#C4604A]">
+                  {String(currentIdx + 1).padStart(2, "0")} / {TOTAL_PLATES}
+                </span>
+              </div>
+
+              <button
+                onClick={nextPage}
+                disabled={isFlipping}
+                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-md bg-[#F3ECE4] hover:bg-[#E2D5C6] active:bg-[#D4C3AF] text-[#1A1816] border border-[#EDE4D9] text-xs font-mono font-semibold transition-colors disabled:opacity-40"
+              >
+                <span>Next Plate</span>
+                <ChevronRight className="w-4 h-4 text-[#C4604A]" />
+              </button>
+            </div>
+          </div>
+
           {/* ── Active Plate Title & Position ── */}
-          <div className="flex flex-col items-center justify-center text-center mt-2">
+          <div className="flex flex-col items-center justify-center text-center mt-2 px-4">
             <span className="text-[11px] uppercase tracking-[0.22em] font-semibold text-[#C4604A]">
               {activePlate.plateNumber} · {activePlate.category}
             </span>
@@ -453,8 +571,8 @@ export function EngineeringBook({
             </p>
           </div>
 
-          {/* ── Plate Index Navigation Tabs ── */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-4xl mx-auto pt-2">
+          {/* ── Plate Index Navigation Tabs (Scrollable on Mobile, Centered on Desktop) ── */}
+          <div className="flex items-center justify-start md:justify-center gap-1.5 max-w-4xl mx-auto pt-2 overflow-x-auto no-scrollbar w-full px-2 py-1">
             {MONOGRAPH_PLATES.map((p, idx) => {
               const isActive = idx === currentIdx;
               return (
@@ -462,7 +580,7 @@ export function EngineeringBook({
                   key={p.id}
                   onClick={() => jumpToPlate(idx)}
                   disabled={isFlipping}
-                  className={`px-3 py-1.5 rounded text-xs font-mono transition-all ${
+                  className={`px-3 py-1.5 rounded text-xs font-mono transition-all shrink-0 ${
                     isActive
                       ? "bg-[#1A1816] text-[#FAF6F1] font-bold shadow-sm ring-1 ring-[#C4604A]"
                       : "bg-[#F3ECE4] text-[#5E5854] hover:bg-[#E2D5C6] hover:text-[#1A1816]"
