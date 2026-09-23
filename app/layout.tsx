@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       "The digital monograph of Shivam Kedare: exploring responsive web experiences, enterprise event platforms, local AI agents, and algorithmic optimization.",
     images: [
       {
-        url: "/icon.svg",
+        url: "/favicon.png",
         width: 512,
         height: 512,
         alt: "Shivam Kedare — Web Developer & Software Engineer",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     title: "Shivam Kedare — Web Developer & Software Engineer",
     description:
       "Web Developer & Software Systems Engineer specializing in responsive web development, event technology platforms, and local AI automation.",
-    images: ["/icon.svg"],
+    images: ["/favicon.png"],
   },
   robots: {
     index: true,
@@ -93,22 +93,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+
+    icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 }
 
